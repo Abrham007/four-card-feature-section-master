@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+article {
+  padding: 20px;
+  box-shadow: 0px 5px 15px 0px hsl(229, 6%, 66%);
+  height: 200px;
+  width: 100%;
+  border-top: 5px solid;
+  border-radius: 5px;
+}
+p {
+  font-size: 0.7em;
+  width: 80%;
+  color: hsl(229, 6%, 66%);
+  margin-top: 10px;
+}
+.container {
+  height: 95vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  grid-column: span 3;
+  text-align: center;
+}
+h2,
+h1 {
+  font-size: 1.8em;
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+}
+h2 {
+  font-weight: 700;
+}
+header > p {
+  width: 40%;
+  margin: auto;
+}
+main {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  height: 500px;
+}
+main > * {
+  flex: 1;
+}
+.article-1 {
+  border-color: hsl(180, 62%, 55%);
+  background: url(../images/icon-supervisor.svg) no-repeat bottom right;
+  background-origin: content-box;
+  align-self: center;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+  justify-content: center;
+}
+.article-2 {
+  border-color: hsl(0, 78%, 62%);
+  background: url(../images/icon-team-builder.svg) no-repeat bottom right;
+  background-origin: content-box;
+}
+.article-3 {
+  border-color: hsl(34, 97%, 64%);
+  background: url(../images/icon-karma.svg) no-repeat bottom right;
+  background-origin: content-box;
+}
+.article-4 {
+  border-color: hsl(212, 86%, 64%);
+  background: url(../images/icon-calculator.svg) no-repeat bottom right;
+  background-origin: content-box;
+  align-self: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    /* gap: 0; */
+  }
+  .container > * {
+    flex: 1;
+  }
+  main {
+    flex-direction: column;
+    height: 1000px;
+  }
+  article:not(.middle article) {
+    height: 400px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+  header > p {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}
